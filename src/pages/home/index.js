@@ -232,6 +232,7 @@ const Home = () => {
                   <TypeWritter
                     options={{
                       strings: ["community"],
+                      cursor: "_",
                       autoStart: true,
                       loop: true,
                       pauseFor: 500,
