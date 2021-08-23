@@ -22,64 +22,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "BergenMonoRegular";
-  src: url("assets/fonts/BergenMono-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Bergen";
+  src: url('./assets/fonts/BergenMono-Regular.woff');
 }
-@font-face {
-  font-family: "BergenMonoMedium";
-  src: url("assets/fonts/BergenMono-SemiBold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "BergenMonoBold";
-  src: url("assets/fonts/BergenMono-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-@media only screen and (max-width: 1720px) {
-  .logo{
-    margin-left: 20px;
-  }
-  .swap{
-    margin-right: 75px;
-  }
-}
-@media only screen and (max-width: 1201px) {
-  .logo{
-    margin-left: 5px;
-  }
-  .swap{
-    margin-right:5px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .logo{
-    margin-left: 20px;
-  }
-  .hambur{
-    margin-right: 20px;
-  }
-  .content{
-    padding-left: 60px !important;
-    padding-right: 40px !important;
-  }
-  
-}
-
-
-/* @media screen and (max-width: 1520px) {
-  .logo{
-    margin-left: 35px;
-  }
-  .swap{
-    margin-right: 90px;
-  }
-} */
- 
-

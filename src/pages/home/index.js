@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import TypeWritter from "typewriter-effect";
 import HamburgerMenuButton from "components/hamburgerMenuButton";
+import Stats1 from "components/Stats1"
 import { ReactComponent as LogoSmall } from "assets/images/logo_small.svg";
 import { ReactComponent as LogoBig } from "assets/images/logo_big.svg";
 import donutIcon from "assets/images/donut.svg";
 import styles from "./style.module.css";
 import clsx from "clsx";
-import erc from "../../assets/images/erc.svg";
+import Tokenomics from "components/Tokenomics";
+import RoadMap from "components/RoadMap";
+import Platform1 from "components/Platform1";
 
 const Home = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -58,53 +61,39 @@ const Home = () => {
       <header className={styles.header}>
         {/* Navbar start */}
         <nav className={styles.navbar}>
-          <div className={styles.navbar_logo + " logo"}>
-            <div className="logo">
-              <Link to="/">
-                <LogoSmall />
-              </Link>
-            </div>
+          <div className={styles.navbar_logo}>
+            <Link to="/">
+              <LogoSmall />
+            </Link>
           </div>
 
           <ul className={styles.tabNav}>
             <li className={clsx(styles.navItem, styles.navItemDesktop)}>
-              <Link to="/" className={styles.navbar_link + " hidden sm:block"}>
+              <Link to="/" className={styles.navbar_link}>
                 Home
               </Link>
             </li>
 
             <li className={clsx(styles.navItem, styles.navItemDesktop)}>
-              <Link
-                to="/contract"
-                className={styles.navbar_link + " hidden lg:block"}
-              >
+              <Link to="/contract" className={styles.navbar_link}>
                 Contract
               </Link>
             </li>
 
             <li className={clsx(styles.navItem, styles.navItemDesktop)}>
-              <Link
-                to="/tokenomics"
-                className={styles.navbar_link + " hidden sm:block"}
-              >
+              <Link to="/tokenomics" className={styles.navbar_link}>
                 Tokenomics
               </Link>
             </li>
 
             <li className={clsx(styles.navItem, styles.navItemDesktop)}>
-              <Link
-                to="/roadmap"
-                className={styles.navbar_link + " hidden lg:block"}
-              >
+              <Link to="/roadmap" className={styles.navbar_link}>
                 Roadmap
               </Link>
             </li>
 
             <li className={clsx(styles.navItem, styles.navItemDesktop)}>
-              <Link
-                to="/platform"
-                className={styles.navbar_link + " hidden sm:block"}
-              >
+              <Link to="/platform" className={styles.navbar_link}>
                 Platform
               </Link>
             </li>
@@ -113,13 +102,10 @@ const Home = () => {
               className={clsx(
                 styles.navItem,
                 styles.navItemDesktop,
-                "hidden xl:block"
+                "hidden lg:block"
               )}
             >
-              <Link
-                to="/blog"
-                className={styles.navbar_link + " hidden lg:block"}
-              >
+              <Link to="/blog" className={styles.navbar_link}>
                 Blog
               </Link>
             </li>
@@ -128,13 +114,10 @@ const Home = () => {
               className={clsx(
                 styles.navItem,
                 styles.navItemDesktop,
-                "hidden xl:block"
+                "hidden lg:block"
               )}
             >
-              <Link
-                to="/media"
-                className={styles.navbar_link + " hidden lg:block"}
-              >
+              <Link to="/media" className={styles.navbar_link}>
                 Media
               </Link>
             </li>
@@ -146,7 +129,7 @@ const Home = () => {
             animate={isMobileMenuOpen ? "opened" : "closed"}
             initial="initial"
           >
-            <motion.li variants={linkVariants} className="block lg:hidden">
+            <motion.li variants={linkVariants} className="block md:hidden">
               <Link
                 to="/"
                 className={clsx(styles.navbar_link, styles.navbar_link_mobile)}
@@ -154,7 +137,7 @@ const Home = () => {
                 Home
               </Link>
             </motion.li>
-            <motion.li variants={linkVariants} className="block lg:hidden">
+            <motion.li variants={linkVariants} className="block md:hidden">
               <Link
                 to="/contract"
                 className={clsx(styles.navbar_link, styles.navbar_link_mobile)}
@@ -162,7 +145,7 @@ const Home = () => {
                 Contract
               </Link>
             </motion.li>
-            <motion.li variants={linkVariants} className="block lg:hidden">
+            <motion.li variants={linkVariants} className="block md:hidden">
               <Link
                 to="/tokenomics"
                 className={clsx(styles.navbar_link, styles.navbar_link_mobile)}
@@ -170,7 +153,7 @@ const Home = () => {
                 Tokenomics
               </Link>
             </motion.li>
-            <motion.li variants={linkVariants} className="block lg:hidden">
+            <motion.li variants={linkVariants} className="block md:hidden">
               <Link
                 to="/roadmap"
                 className={clsx(styles.navbar_link, styles.navbar_link_mobile)}
@@ -178,7 +161,7 @@ const Home = () => {
                 Roadmap
               </Link>
             </motion.li>
-            <motion.li variants={linkVariants} className="block lg:hidden">
+            <motion.li variants={linkVariants} className="block md:hidden">
               <Link
                 to="/platform"
                 className={clsx(styles.navbar_link, styles.navbar_link_mobile)}
@@ -204,7 +187,7 @@ const Home = () => {
             </motion.li>
           </motion.ul>
 
-          <div className={styles.navbar_subnav + " swap"}>
+          <div className={styles.navbar_subnav}>
             <Link
               to="/"
               className={clsx(styles.subnav_link, "flex items-center")}
@@ -215,120 +198,86 @@ const Home = () => {
             <HamburgerMenuButton
               isOpen={isMobileMenuOpen}
               onClick={toggleMobileMenu}
-              className="block lg:hidden ml-5 hambur"
+              className="block lg:hidden"
             />
           </div>
         </nav>
         {/* Navbar end */}
 
         {/* Hero start */}
-        <div className="py-10 px-8 md:px-24 content text-left xxl:px-4 xxl:max-w-9xl xxl:mx-auto mt-24">
+        <div className="py-10 px-8 md:px-24 text-left xxl:px-4 xxl:max-w-9xl xxl:mx-auto">
           <div className="w-full flex items-center">
             <div className="mr-1 flex-grow">
               <p className={styles.headerBadge}>
-                <div className="block uppercase font-bold">
-                  introducing cuminu
-                </div>
-                <div className="ml-3">
-                  <img src={erc} alt="erc" />
-                </div>
-                {/*  <div className="block ml-3 text-sm border border-pink-800 px-2 py-0.5 rounded-md">
-                  ERC-20
-                </div> */}
+                <span className="block">introducing cuminu</span>
+                <span className="block ml-2 border border-pink-800 px-2 rounded-md">
+                  erc-20
+                </span>
               </p>
-              <div>
-                <h1 className={styles.headerHeadlineText}>
-                  <span className="block">The token that</span>
-                  <span className="block">powers the</span>
-                  <span
-                    className="block text-pink-800"
-                    style={{
-                      fontFamily: "helveticaExtraBold",
-                      fontWeight: "normal",
-                      fontStyle: "normal",
-                    }}
-                  >
-                    <TypeWritter
-                      options={{
-                        strings: ["communiti"],
-                        cursor: "_",
-                        autoStart: true,
-                        loop: true,
-                        pauseFor: 500,
-                        deleteSpeed: 10,
-                        delay: 10,
-                      }}
-                    />
-                  </span>
-                  <span className="block">platform</span>
-                </h1>
-                <div className="md:flex md:justify-between md:items-center md:mt-3">
-                  <h2 className={styles.headerSubHeadline}>
-                    <span className="block">
-                      Join us as we{" "}
-                      <span
-                        className="text-white"
-                        style={{
-                          fontFamily: "helveticaExtraBold",
-                          fontWeight: "extra bold",
-                          fontStyle: "extra bold",
-                        }}
-                      >
-                        revolutionize
-                      </span>
-                    </span>
-                    <span className="block">adult entertainment forever.</span>
-                    <button
-                      className={clsx(
-                        "bg-pink-800 text-gray-900 mt-10 ml-auto mr-auto md:mr-0  rounded-lg text-xl uppercase xl:hidden block",
-                        styles.ctaButton
-                      )}
-                    >
-                      {/*  <span className="md:hidden">invest</span> */}
-                      <span
-                        style={{
-                          fontFamily: "BergenMonoBold",
-                          fontWeight: "bold",
-                          fontStyle: "bold",
-                          fontSize: "30px",
-                        }}
-                      >
-                        start investing
-                      </span>
-                    </button>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className={styles.heroLogoBig}>
-                <LogoBig />
-              </div>
-              <div className="text-center mt-36 self-start">
-                <button
-                  className={clsx(
-                    "bg-pink-800 text-gray-900 rounded-lg text-xl uppercase xl:block hidden",
-                    styles.ctaButton
-                  )}
+              <h1 className={styles.headerHeadlineText}>
+                <span className="block">The token that</span>
+                <span className="block">powers the</span>
+                <span
+                  className="block text-pink-800"
+                  style={{
+                    fontFamily: "helveticaExtraBold",
+                    fontWeight: "normal",
+                    fontStyle: "normal",
+                  }}
                 >
-                  {/*  <span className="md:hidden">invest</span> */}
-                  <span
-                    style={{
-                      fontFamily: "BergenMonoBold",
-                      fontWeight: "bold",
-                      fontStyle: "bold",
-                      fontSize: "32px",
+                  <TypeWritter
+                    options={{
+                      strings: ["community"],
+                      autoStart: true,
+                      loop: true,
                     }}
-                  >
-                    start investing
-                  </span>
-                </button>
-              </div>
+                  />
+                </span>
+                <span className="block">platform</span>
+              </h1>
+            </div>
+
+            <div className={styles.heroLogoBig}>
+              <LogoBig />
+            </div>
+          </div>
+
+          <div className="md:flex md:justify-between md:items-center">
+            <h2 className={styles.headerSubHeadline}>
+              <span className="block">
+                Join us as we{" "}
+                <span
+                  className="text-white"
+                  style={{
+                    fontFamily: "helveticaExtraBold",
+                    fontWeight: "normal",
+                    fontStyle: "normal",
+                  }}
+                >
+                  revolutionize
+                </span>
+              </span>
+              <span className="block">adult entertainment forever.</span>
+            </h2>
+            <div className="mt-7 text-center md:mt-0">
+              <button
+                className={clsx(
+                  "bg-pink-800 text-gray-900 py-2 px-4 rounded-lg text-xl uppercase",
+                  styles.ctaButton
+                )}
+              >
+                <span className="lg:hidden">invest</span>
+                <span className="hidden lg:block">start investing</span>
+              </button>
             </div>
           </div>
         </div>
         {/* Hero End */}
       </header>
+      <Stats1></Stats1>
+      <Tokenomics></Tokenomics>
+      <RoadMap></RoadMap>
+      <Platform1></Platform1>
     </>
   );
 };
