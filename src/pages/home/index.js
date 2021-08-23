@@ -8,6 +8,7 @@ import { ReactComponent as LogoBig } from "assets/images/logo_big.svg";
 import donutIcon from "assets/images/donut.svg";
 import styles from "./style.module.css";
 import clsx from "clsx";
+import erc from "../../assets/images/erc.svg";
 
 const Home = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -210,9 +211,12 @@ const Home = () => {
                 <div className="block uppercase font-bold">
                   introducing cuminu
                 </div>
-                <div className="block ml-3 text-sm border border-pink-800 px-2 py-0.5 rounded-md">
-                  ERC-20
+                <div className="ml-3">
+                  <img src={erc} alt="erc" />
                 </div>
+                {/*  <div className="block ml-3 text-sm border border-pink-800 px-2 py-0.5 rounded-md">
+                  ERC-20
+                </div> */}
               </p>
               <h1 className={styles.headerHeadlineText}>
                 <span className="block">The token that</span>
@@ -270,9 +274,7 @@ const Home = () => {
                 {/*  <span className="md:hidden">invest</span> */}
                 <span
                   style={{
-                    fontFamily: "BergenMonoBold",
-                    fontWeight: "normal",
-                    fontStyle: "normal",
+                    fontSize: "30px",
                   }}
                 >
                   start investing
@@ -292,6 +294,7 @@ const Home = () => {
                     fontFamily: "BergenMonoBold",
                     fontWeight: "normal",
                     fontStyle: "normal",
+                    fontSize: "32px",
                   }}
                 >
                   start investing

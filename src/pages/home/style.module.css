@@ -41,6 +41,7 @@
 }
 
 .navItem {
+
 }
 
 .navItemDesktop {
@@ -50,9 +51,9 @@
 .navbar_link:link,
 .navbar_link:visited {
   font-family: "helveticaBold";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18px;
+  font-weight: bold;
+  font-style: bold;
+  font-size: 30px;
   transition: all 0.3s ease;
 }
 
@@ -63,7 +64,8 @@
 
 .headerBadge {
   @apply flex items-center text-pink-800 text-base;
-  font-size: 24px;
+  font-size: 35px;
+  font-family: 'helveticaBold';
 }
 
 .headerHeadlineText {
@@ -72,7 +74,7 @@
   font-style: normal;
   margin-top: 8px;
   color: #fff;
-  font-size: 48px;
+  font-size: 115px;
   line-height: 115%;
 }
 
@@ -81,18 +83,18 @@
   font-weight: normal;
   font-style: normal;
   /* margin-top: 12px;s */
-  font-size: 32px;
+  font-size: 50px;
 }
 
 .ctaButton {
-  font-family: "helveticaExtraBold";
+  font-family: "BergenMonoBold";
   font-weight: normal;
   font-style: normal;
 }
 
 .heroLogoBig svg {
-  width: 163px;
-    height: 200px;
+  width:100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 700px) {
