@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "helveticaMedium";
+  src: url("assets/fonts/HelveticaNowDisplay-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "helveticaBold";
+  src: url("assets/fonts/HelveticaNowDisplay-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "helveticaExtraBold";
+  src: url("assets/fonts/HelveticaNowDisplay-ExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BergenMonoRegular";
+  src: url("assets/fonts/BergenMono-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BergenMonoMedium";
+  src: url("assets/fonts/BergenMono-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BergenMonoBold";
+  src: url("assets/fonts/BergenMono-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (max-width: 1720px) {
+  .logo{
+    margin-left: 20px;
+  }
+  .swap{
+    margin-right: 75px;
+  }
+}
+@media screen and (max-width: 900px){
+  .logo{
+    margin-left: 10px !important;
+  }
+  .swap{
+    margin-right: 0px !important;
+  }
+}
+@media screen and (max-width: 1520px) {
+  .logo{
+    margin-left: 35px;
+  }
+  .swap{
+    margin-right: 90px;
+  }
+}
+
