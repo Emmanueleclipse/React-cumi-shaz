@@ -27,7 +27,7 @@ function Tokenomics() {
                         fontFamily: "helveticaBold",
                         fontWeight: "normal",
                         fontStyle: "normal",
-                        fontSize:"65px",
+                        fontSize:"5vmax",
                         
                     }}
                     >
