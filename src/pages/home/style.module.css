@@ -11,7 +11,7 @@
 }
 
 .tabNav {
-  @apply hidden md:flex h-full items-center;
+  @apply sm:hidden md:flex h-full items-center;
 }
 
 .navbar_nav {
@@ -88,8 +88,9 @@
 
 .ctaButton {
   font-family: "BergenMonoBold";
-  font-weight: normal;
-  font-style: normal;
+  font-weight: bold;
+  font-style: bold;
+  padding:15px;
 }
 
 .heroLogoBig svg {
@@ -97,10 +98,26 @@
     height: 100%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
   .heroLogoBig svg {
+   width: 122px;
+height: 150px;
+  }
+  .headerHeadlineText{
+    font-size: 100px ;
+  }
+  
+}
+@media screen and (max-width: 1001px) {
+  .heroLogoBig{
    display: none;
   }
+}
+@media screen and (max-width: 800px) {
+  .tabNav{
+   display: none;
+  }
+  
 }
 
 /* @media screen and (min-width: 768px) {

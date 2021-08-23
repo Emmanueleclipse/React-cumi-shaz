@@ -41,7 +41,8 @@
   font-style: normal;
 }
 
-@media screen and (max-width: 1720px) {
+
+@media only screen and (max-width: 1720px) {
   .logo{
     margin-left: 20px;
   }
@@ -49,20 +50,36 @@
     margin-right: 75px;
   }
 }
-@media screen and (max-width: 900px){
+@media only screen and (max-width: 1201px) {
   .logo{
-    margin-left: 10px !important;
+    margin-left: 5px;
   }
   .swap{
-    margin-right: 0px !important;
+    margin-right:5px;
   }
 }
-@media screen and (max-width: 1520px) {
+@media only screen and (max-width: 800px) {
+  .logo{
+    margin-left: 20px;
+  }
+  .hambur{
+    margin-right: 20px;
+  }
+  .content{
+    padding-left: 60px !important;
+    padding-right: 40px !important;
+  }
+  
+}
+
+
+/* @media screen and (max-width: 1520px) {
   .logo{
     margin-left: 35px;
   }
   .swap{
     margin-right: 90px;
   }
-}
+} */
+ 
 
